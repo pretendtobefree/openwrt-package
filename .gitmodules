@@ -16,9 +16,6 @@
 [submodule "luci-app-vssr"]
 	path = vssr/luci-app-vssr
 	url = https://github.com/jerrykuku/luci-app-vssr
-[submodule "OpenClash"]
-	path = OpenClash
-	url = https://github.com/vernesong/OpenClash
 [submodule "luci-app-speedtest-web/luci-app-speedtest-web"]
 	path = luci-app-speedtest-web/luci-app-speedtest-web
 	url = https://github.com/ZeaKyX/luci-app-speedtest-web.git
