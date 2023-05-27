@@ -1,6 +1,3 @@
-[submodule "helloworld"]
-	path = helloworld
-	url = https://github.com/fw876/helloworld
 [submodule "luci-app-tcpdump"]
 	path = luci-app-tcpdump
 	url = https://github.com/KFERMercer/luci-app-tcpdump
