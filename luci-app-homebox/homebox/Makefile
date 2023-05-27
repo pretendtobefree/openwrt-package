@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=homebox
 PKG_VERSION:=0.0.0-dev.2020062901
-PKG_RELEASE:=14
+PKG_RELEASE:=7
 
 PKG_SOURCE_URL_FILE:=v$(PKG_VERSION).tar.gz
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
@@ -62,8 +62,22 @@ define Build/Compile
 endef
 
 define Package/$(PKG_NAME)/install
-	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_DIR) $(1)/usr/bin $(1)/etc/config $(1)/etc/init.d $(1)/etc/uci-defaults
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/build/server $(1)/usr/bin/homebox
+	$(INSTALL_CONF) ./files/homebox.config $(1)/etc/config/homebox
+	$(INSTALL_BIN) ./files/homebox.init $(1)/etc/init.d/homebox
+	$(INSTALL_BIN) ./files/homebox.uci-default $(1)/etc/uci-defaults/homebox
+endef
+
+define Package/$(PKG_NAME)/conffiles
+/etc/config/homebox
+endef
+
+define Package/$(PKG_NAME)/postinst
+#!/bin/sh
+if [ -z "$${IPKG_INSTROOT}" ]; then
+	[ -f /etc/uci-defaults/homebox ] && /etc/uci-defaults/homebox && rm -f /etc/uci-defaults/homebox
+fi
 endef
 
 define Host/Configure
