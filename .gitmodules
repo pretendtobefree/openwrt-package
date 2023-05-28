@@ -16,3 +16,6 @@
 [submodule "luci-app-homebox/luci-app-homebox"]
 	path = luci-app-homebox/luci-app-homebox
 	url = https://github.com/selfcan/luci-app-homebox.git
+[submodule "package/OpenAppFilter"]
+	path = package/OpenAppFilter
+	url = https://github.com/destan19/OpenAppFilter.git
