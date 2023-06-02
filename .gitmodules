@@ -25,3 +25,6 @@
 [submodule "op-homebox"]
 	path = op-homebox
 	url = https://github.com/ywt114/op-homebox.git
+[submodule "luci-app-chatgpt"]
+	path = luci-app-chatgpt
+	url = https://github.com/sirpdboy/chatgpt-web.git
