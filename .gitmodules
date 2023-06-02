@@ -28,3 +28,6 @@
 [submodule "luci-app-chatgpt"]
 	path = luci-app-chatgpt
 	url = https://github.com/sirpdboy/chatgpt-web.git
+[submodule "luci-app-fileassistant"]
+	path = luci-app-fileassistant
+	url = https://github.com/kenzok78/luci-app-fileassistant.git
