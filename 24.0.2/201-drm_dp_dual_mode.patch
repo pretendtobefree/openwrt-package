@@ -1,0 +1,13 @@
+--- a/drivers/gpu/drm/display/drm_dp_dual_mode_helper.c
++++ b/drivers/gpu/drm/display/drm_dp_dual_mode_helper.c
+@@ -246,8 +246,8 @@ enum drm_dp_dual_mode_type drm_dp_dual_m
+ 		 * If not a proper type 1 ID, still assume type 1, but let
+ 		 * the user know that we may have misdetected the type.
+ 		 */
+-		if (!is_type1_adaptor(adaptor_id))
+-			drm_err(dev, "Unexpected DP dual mode adaptor ID %02x\n", adaptor_id);
++		/*if (!is_type1_adaptor(adaptor_id))
++			drm_err(dev, "Unexpected DP dual mode adaptor ID %02x\n", adaptor_id);*/
+ 
+ 	}
+ 
