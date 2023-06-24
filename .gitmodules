@@ -31,3 +31,6 @@
 [submodule "luci-app-fileassistant"]
 	path = luci-app-fileassistant
 	url = https://github.com/kenzok78/luci-app-fileassistant.git
+[submodule "luci-app-adguardhome"]
+	path = luci-app-adguardhome
+	url = https://github.com/xiaoxiao29/luci-app-adguardhome.git
